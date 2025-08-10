@@ -1,6 +1,5 @@
+// utils/spotify.js
 const querystring = require("querystring");
-
-let access_token_cache = "";
 
 async function getAccessToken() {
   if (!process.env.SPOTIFY_REFRESH_TOKEN) {
@@ -25,8 +24,7 @@ async function getAccessToken() {
 
   const data = await response.json();
   if (data.access_token) {
-    access_token_cache = data.access_token;
-    return access_token_cache;
+    return data.access_token;
   } else {
     throw new Error("Failed to refresh Spotify access token");
   }

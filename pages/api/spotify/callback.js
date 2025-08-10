@@ -1,6 +1,6 @@
-import querystring from "querystring";
+const querystring = require("querystring");
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const code = req.query.code || null;
 
   const basicAuth = Buffer.from(
@@ -14,9 +14,9 @@ export default async function handler(req, res) {
       "Content-Type": "application/x-www-form-urlencoded",
     },
     body: querystring.stringify({
+      grant_type: "authorization_code",
       code: code,
       redirect_uri: process.env.SPOTIFY_REDIRECT_URI,
-      grant_type: "authorization_code",
     }),
   });
 
@@ -24,11 +24,8 @@ export default async function handler(req, res) {
 
   if (data.refresh_token) {
     console.log("Your refresh token:", data.refresh_token);
-    res.send(
-      "Auth successful! Copy this refresh token into your .env file: " +
-        data.refresh_token
-    );
-  } else {
-    res.status(400).json({ error: "Failed to retrieve refresh token" });
+    return res.status(200).json({ refresh_token: data.refresh_token });
   }
-}
+
+  res.status(400).json({ error: "Failed to retrieve refresh token", data });
+};
