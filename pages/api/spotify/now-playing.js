@@ -1,6 +1,6 @@
-import { getAccessToken } from "../../../utils/spotify";
+const { getAccessToken } = require("../../../utils/spotify");
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     const token = await getAccessToken();
     const response = await fetch(
@@ -19,4 +19,4 @@ export default async function handler(req, res) {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-}
+};

@@ -1,8 +1,8 @@
-import querystring from "querystring";
+const querystring = require("querystring");
 
 let access_token_cache = "";
 
-export async function getAccessToken() {
+async function getAccessToken() {
   if (!process.env.SPOTIFY_REFRESH_TOKEN) {
     throw new Error("No refresh token set. Please login first.");
   }
@@ -31,3 +31,5 @@ export async function getAccessToken() {
     throw new Error("Failed to refresh Spotify access token");
   }
 }
+
+module.exports = { getAccessToken };
