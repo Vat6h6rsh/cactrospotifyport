@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "name": "E-Commerce Storefront",
+      "image": "/projects/doorwash.png",
+      "description": "Responsive e-commerce site with product filters, search, and cart system. Integrated dummy product API using React hooks and component architecture.",
+      "tags": ["React", "JavaScript", "CSS"],
+      "codeLink": "https://github.com/Vat6h6rsh/door_wash",
+      "liveLink": "https://door-wash.vercel.app/"
+    },
+    {
+      "id": 2,
+      "name": "Portfolio Website",
+      "image": "/projects/port.png",
+      "description": "Personal portfolio with animations and responsive design. Built with Next.js static generation and Tailwind CSS for clean UI.",
+      "tags": ["Next.js", "Tailwind CSS"],
+      "codeLink": "https://github.com/Vat6h6rsh/my-portfolio",
+      "liveLink": "#"
+    },
+    {
+      "id": 3,
+      "name": "Chat App",
+      "image": "/projects/yoomhome.png",
+      "description": "Real-time chat application with room-based conversations. Used Express server, Socket.IO, and MongoDB for message storage.",
+      "tags": ["Node.js", "Socket.IO", "MongoDB"],
+      "codeLink": "https://github.com/Vat6h6rsh/magikmirror",
+      "liveLink": "#"
+    },
+    {
+      "id": 4,
+      "name": "Weather App",
+      "image": "/projects/weather.webp",
+      "description": "Weather dashboard with live stats and city search. Implemented async data fetching with Axios and error handling.",
+      "tags": ["React", "API Integration"],
+      "codeLink": "#",
+      "liveLink": "#"
+    },
+    {
+      "id": 5,
+      "name": "Task Manager",
+      "image": "/projects/taskmanager.webp",
+      "description": "CRUD-based task manager with RESTful API backend and React state management for UI updates.",
+      "tags": ["MERN Stack", "REST API"],
+      "codeLink": "#",
+      "liveLink": "#"
+    },
+    {
+      "id": 6,
+      "name": "Blog Platform",
+      "image": "/projects/blog.webp",
+      "description": "Markdown-based blog with dynamic routing. Integrated file-based routing and MDX support for content-driven design.",
+      "tags": ["Next.js", "Markdown"],
+      "codeLink": "#",
+      "liveLink": "#"
+    }
+  ]
